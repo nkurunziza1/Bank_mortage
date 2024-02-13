@@ -1,0 +1,7 @@
+service: () -> {
+    calculateDurationMonths: (nat64, nat64, nat64) -> (variant {Ok:nat64; Err:text});
+    calculateLoan: (nat64, nat64, nat64) -> (variant {Ok:record {durationMonths:nat64; interestRate:nat64; totalPayment:nat64; monthlyPayment:nat64; amount:nat64}; Err:text});
+    calculateMonthlyPayment: (nat64, nat64, nat64) -> (variant {Ok:nat64; Err:text});
+    validateInterestRate: (nat64) -> (variant {Ok:text; Err:text});
+    validateLoanAmount: (nat64) -> (variant {Ok:text; Err:text});
+}
